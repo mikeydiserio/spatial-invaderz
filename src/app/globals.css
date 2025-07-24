@@ -1,42 +1,510 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+
+@keyframes space-invader-1 {
+  50% {
+    box-shadow: 
+      0 0 0 .25em #fff,
+      0 .25em 0 .25em #fff,
+      -.625em .375em 0 .125em #fff,
+      .625em .375em 0 .125em #fff,
+      -.75em -.75em 0 0 #fff,
+      .75em -.75em 0 0 #fff,
+      -.5em -.5em 0 0 #fff,
+      .5em -.5em 0 0 #fff,
+      -.75em -.25em 0 0 #fff,
+      -.5em -.25em 0 0 #fff,
+      .5em -.25em 0 0 #fff,
+      .75em -.25em 0 0 #fff,
+      -1em 0 0 0 #fff,
+      -.75em 0 0 0 #fff,
+      .75em 0 0 0 #fff,
+      1em 0 0 0 #fff,
+      -1em .25em 0 0 #fff,
+      1em .25em 0 0 #fff,
+      -.75em .75em 0 0 #fff,
+      .75em .75em 0 0 #fff,
+      /* Left Arm */
+      1.25em 0 0 0 #fff,
+      1.25em -.25em 0 0 #fff,
+      1.25em -.5em 0 0 #fff,
+      /* Right Arm */
+      -1.25em 0 0 0 #fff, 
+      -1.25em -.25em 0 0 #fff, 
+      -1.25em -.5em 0 0 #fff, 
+      /* Left Foot */
+      -1em 1em 0 0 #fff, 
+      -1em 1em 0 0 #fff, 
+      /* Right Foot */
+      1em 1em 0 0 #fff, 
+      1em 1em 0 0 #fff;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@keyframes space-invader-2 {
+  50% {
+    box-shadow: 
+      /* Body */
+      -.125em -.5em 0 .25em #fff,
+      .125em -.5em 0 .25em #fff,
+      -.75em -.375em 0 .125em #fff,
+      -.875em -.375em 0 .125em #fff,
+      .75em -.375em 0 .125em #fff,
+      .875em -.375em 0 .125em #fff,
+      -1em 0 0 .25em #fff,
+      1em 0 0 .25em #fff,
+      -.5em .25em 0 0 #fff,
+      -.25em .25em 0 0 #fff,
+      0 .25em 0 0 #fff,
+      .25em .25em 0 0 #fff,
+      .5em .25em 0 0 #fff,
+      /* Crotch */
+      .3125em .5em 0 0 #fff,
+      .5em .5em 0 0 #fff,
+      .625em .5em 0 0 #fff,
+      -.3125em .5em 0 0 #fff,
+      -.5em .5em 0 0 #fff,
+      -.625em .5em 0 0 #fff,
+      .0625em .75em 0 0 #fff,
+      -.0625em .75em 0 0 #fff,
+      /* Right Leg */
+      -.75em .75em 0 0 #fff,
+      -.9375em .75em 0 0 #fff,
+      -.75em 1em 0 0 #fff,
+      -.5em 1em 0 0 #fff,
+      /* Left Leg */
+      .75em .75em 0 0 #fff,
+      .9375em .75em 0 0 #fff,
+      .75em 1em 0 0 #fff,
+      .5em 1em 0 0 #fff;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@keyframes space-invader-3 {
+  50% {
+    box-shadow: 
+    /* Body */
+    0 -.625em 0 .125em #fff,
+    -.25em -.375em 0 .125em #fff,
+    .25em -.375em 0 .125em #fff,
+    .625em -.25em 0 0 #fff,
+    -.625em -.25em 0 0 #fff,
+    0 .125em 0 .125em #fff,
+    -.75em .125em 0 .125em #fff,
+    .75em .125em 0 .125em #fff,
+    .375em .25em 0 0 #fff,
+    -.375em .25em 0 0 #fff,
+      /* Crotch */
+    .125em .5em 0 0 #fff,
+    -.125em .5em 0 0 #fff,
+      /* Right Leg */
+      -.375em .5em 0 0 #fff,
+      -.625em .75em 0 0 #fff,
+      -.875em 1em 0 0 #fff,
+      -.375em 1em 0 0 #fff,
+      /* Left Leg */
+      .375em .5em 0 0 #fff,
+      .625em .75em 0 0 #fff,
+      .875em 1em 0 0 #fff,
+      .375em 1em 0 0 #fff;
+  }
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0a0a2a;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(40, 40, 120, 0.2) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(80, 20, 100, 0.2) 0%, transparent 20%),
+    linear-gradient(to bottom, #000033, #000066);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.game-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.game-screen {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 20, 0.7);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #00f0ff;
+  border-radius: 8px;
+  box-shadow: 
+    0 0 20px rgba(0, 240, 255, 0.3),
+    inset 0 0 30px rgba(0, 100, 255, 0.2);
+}
+
+.game-ui {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-shadow: 0 0 5px #00f0ff;
+  z-index: 10;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.lives {
+  display: flex;
+  gap: 10px;
+}
+
+.life-icon {
+  font-size: 24px;
+  text-shadow: 0 0 8px #42c9d8;
+}
+
+.player {
+  position: absolute;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  z-index: 5;
+  background-color: #FFF;
+  transition: left 0.1s ease-out;
+   box-shadow: 
+    0 0 0 .25em #fff,
+    .625em 0 0 .25em #fff,
+    -.625em 0 0 .25em #fff,
+    1em .0625em 0 .1875em #fff,
+    -1em .0625em 0 .1875em #fff,
+    0 -.25em 0 .25em #fff,
+    0 -.625em 0 0 #fff;
+}
+
+
+.enemy {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid salmon;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+/* .enemy svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  width: 24px;
+  height: 24px;
+  
+  path {
+    fill: #fff;
+    stroke: #00f0ff;
+    stroke-width: 1;
   }
+} */
+
+
+.enemy-basic {
+  background: transparent;
+  box-shadow: 0 0 8px #ffae00;
+  background-image: url('../icons/invader.svg');
+}
+
+
+.enemy-medium {
+  background: transparent;
+  box-shadow: 0 0 8px #42c9d8;
+  background-image: url('../icons/invader2.svg');
+
+} 
+
+.enemy-advanced {
+  background: transparent;
+  box-shadow: 0 0 8px #f00;
+  background-image: url('../icons/invader3.svg');
+
+}
+
+.enemy-health {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: white;
+  background: rgba(0,0,0,0.7);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.bullet {
+  position: absolute;
+  width: 0.5%;
+  height: 1.5%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.player-bullet {
+  background: #0ff;
+  box-shadow: 0 0 5px #0ff;
+}
+
+.enemy-bullet {
+  background: #f00;
+  box-shadow: 0 0 5px #f00;
+}
+
+.shield {
+  position: absolute;
+  bottom: 20%;
+  width: 8%;
+  height: 3%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 0 0;
+  border: 1px solid #0f0;
+  z-index: 3;
+  box-shadow: 0 0 5px #0f0;
+  transition: opacity 0.2s ease;
+}
+
+.power-up {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+  z-index: 4;
+}
+
+.power-up-rapidFire {
+  background: #42c9d8;
+  box-shadow: 0 0 8px #42c9d8;
+}
+
+.power-up-shieldBoost {
+  background: #0ff;
+  box-shadow: 0 0 8px #0ff;
+}
+
+.power-up-freeze {
+  background: #0cf;
+  box-shadow: 0 0 8px #0cf;
+}
+
+.power-up-doublePoints {
+  background: #ffae00;
+  box-shadow: 0 0 8px #ffae00;
+}
+
+.power-up-lifeUp {
+  background: #f00;
+  box-shadow: 0 0 8px #f00;
+}
+
+.power-up-indicator {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+  z-index: 11;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 30, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  text-align: center;
+  backdrop-filter: blur(3px);
+}
+
+.menu-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00f0ff;
+  color: #fff;
+  animation: glow 2s infinite alternate;
+  letter-spacing: 3px;
+}
+
+.overlay h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+.overlay p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+button {
+  background: linear-gradient(to bottom, #00f0ff, #0088cc);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+  background: linear-gradient(to bottom, #00ffff, #00aaff);
+}
+
+.instructions {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* UFO style */
+.ufo {
+  position: absolute;
+  width: 6%;
+  height: 3%;
+  background: linear-gradient(to bottom, #88f, #aaf);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    0 0 10px #88f,
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+  z-index: 4;
+  animation: ufo-glow 2s infinite alternate;
+}
+
+.ufo:before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 40%;
+  background: rgba(0, 200, 255, 0.3);
+  border-radius: 50%;
+}
+
+/* Explosion particles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Score effect */
+.score-effect {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #42c9d8;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 0 5px #000;
+  z-index: 11;
+  animation: score-rise 1s forwards;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #00f0ff; }
+  100% { text-shadow: 0 0 20px #00f0ff, 0 0 30px #0088cc; }
+}
+
+@keyframes ufo-glow {
+  0% { box-shadow: 0 0 10px #88f; }
+  100% { box-shadow: 0 0 20px #aaf, 0 0 30px #88f; }
+}
+
+@keyframes score-rise {
+  0% { transform: translate(-50%, -50%); opacity: 1; }
+  100% { transform: translate(-50%, -150%); opacity: 0; }
+}
+
+/* Starfield background */
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+.intro {
+  max-width: 800px;
+  padding: 10px;
+}
+.demo {
+  margin: 10px;
+  padding: 10px;
+  max-width: 800px;
+  height: 200px;
+  background-color: #000;
 }
