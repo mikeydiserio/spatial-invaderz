@@ -66,7 +66,7 @@ This project provides a solid foundation for many more features:
 - **R:** Restart after Game Over
 
 ## Project Structure
-
+```
 /src
 |-- /app
 |   |-- page.tsx             # Main React component for the game
@@ -74,7 +74,7 @@ This project provides a solid foundation for many more features:
 |-- /reducers
 |   |-- reducers.tsx         # The core game logic reducer
 |-- README.md                # This file
-
+```
 ## License
 
 MIT
