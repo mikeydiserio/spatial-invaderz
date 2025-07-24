@@ -28,6 +28,7 @@ const MemoizedScoreEffect = React.memo(
     </div>
   )
 );
+MemoizedScoreEffect.displayName = "MemoizedScoreEffect";
 
 const MemoizedEnemy = React.memo(
   ({ enemy, isFrozen }: { enemy: Enemy; isFrozen: boolean }) => (
@@ -44,6 +45,7 @@ const MemoizedEnemy = React.memo(
     </div>
   )
 );
+MemoizedEnemy.displayName = "MemoizedEnemy";
 
 const MemoizedBullet = React.memo(
   ({ bullet, type }: { bullet: Bullet; type: "player" | "enemy" }) => (
@@ -53,6 +55,7 @@ const MemoizedBullet = React.memo(
     />
   )
 );
+MemoizedBullet.displayName = "MemoizedBullet";
 
 const MemoizedShield = React.memo(({ shield }: { shield: Shield }) => (
   <div
@@ -63,6 +66,7 @@ const MemoizedShield = React.memo(({ shield }: { shield: Shield }) => (
     }}
   />
 ));
+MemoizedShield.displayName = "MemoizedShield";
 
 const MemoizedPowerUp = React.memo(({ powerUp }: { powerUp: PowerUp }) => (
   <div
@@ -70,10 +74,12 @@ const MemoizedPowerUp = React.memo(({ powerUp }: { powerUp: PowerUp }) => (
     style={{ left: `${powerUp.x}%`, top: `${powerUp.y}%` }}
   />
 ));
+MemoizedPowerUp.displayName = "MemoizedPowerUp";
 
 const MemoizedUFO = React.memo(({ ufo }: { ufo: UFO }) => (
   <div className="ufo" style={{ left: `${ufo.x}%`, top: `${ufo.y}%` }} />
 ));
+MemoizedUFO.displayName = "MemoizedUFO";
 
 const MemoizedExplosion = React.memo(
   ({ explosion }: { explosion: Explosion }) => (
@@ -95,6 +101,7 @@ const MemoizedExplosion = React.memo(
     </>
   )
 );
+MemoizedExplosion.displayName = "MemoizedExplosion";
 // SpaceInvaders.tsx
 
 export default function SpaceInvaders() {
@@ -197,13 +204,13 @@ export default function SpaceInvaders() {
         {/* UI */}
         <div className="game-ui">
           <div className="score">SCORE: {score}</div>
-          {/* <div className="lives">
+          <div className="lives">
             {Array.from({ length: lives }).map((_, i) => (
               <div key={i} className="life-icon">
                 🛸
               </div>
             ))}
-          </div> */}
+          </div>
           <div className="level">LEVEL: {level}</div>
         </div>
         {/* Game Elements using Memoized Components */}

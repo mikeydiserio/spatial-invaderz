@@ -180,8 +180,8 @@ export function gameReducer(
         explosions,
         score,
         lives,
-        scoreEffects,
       } = { ...state };
+      const { scoreEffects } = { ...state };
       // Player Movement (with deltaTime)
       if (keysPressed["ArrowLeft"] && playerPosition > 5) {
         playerPosition -= PLAYER_SPEED_PER_SEC * dt;
@@ -362,6 +362,7 @@ export function gameReducer(
         enemies,
         enemyDirection,
         shields,
+        scoreEffects,
         explosions,
         score,
         lives,
