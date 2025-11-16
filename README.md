@@ -1,26 +1,14 @@
 # Space Invaders - React & TypeScript Edition
-
-A modern remake of the timeless arcade classic, *Space Invaders*, built from the ground up using modern web technologies. This project demonstrates advanced React state management, performance optimization for games, and component-based architecture.
-
-@create-next-app was used to bootstrap the application.
+I've remade space invaders as a web app as a means of testing my own skills and jsut seeing what was possible when using JS to build games.
 
 No BS here just HTML vanilla CSS and JavaScript working together to stress your GPU out with this years second most computationally expensive re-release of an 80s game
 
 # Note: App has been deployed as a page in github pages: https://mikeydiserio.github.io/spatial-invaderz
 
 ## Features
+- Game plays just as you would expect for the most part. There are no levels though, only a single iteration that you can play through. 
 
-* **Dynamic Difficulty**: The entire alien formation speeds up as you defeat more invaders, creating a tense and challenging end-game for each level.
-* **Level Progression**: Successfully clear a wave of invaders to advance to the next level, where the enemies start with a higher base speed.
-* **Randomized Enemy Firing**: Enemies fire back at random intervals, with a limit on the number of hostile projectiles on-screen at once to maintain balanced gameplay.
-* **Bonus UFO**: The classic UFO will periodically fly across the top of the screen, offering a high point bonus if you can shoot it down.
-* **Rich Visual Feedback**:
-    * **Particle Explosions**: Destroying ships results in a satisfying particle explosion, with more prominent effects for the player and UFO.
-    * **Floating Score Text**: When an enemy is destroyed, the points gained float up from its location and fade out.
-* **Performance-Optimized Game Loop**: The game logic is decoupled from the render cycle using `requestAnimationFrame` and a time-based delta (`dt`) for smooth, consistent movement across all hardware.
-
-## How to play
-The controls are simple and intuitive, designed to replicate the classic arcade feel.
+- Shields work but you cant shooty through them like you do in the actual game, that would involve re doing the entire shield code and I ceebs doing that.
 
 * **Move Left**: `←` (Left Arrow Key)
 * **Move Right**: `→` (Right Arrow Key)
@@ -77,7 +65,7 @@ This project provides a solid foundation for many more features:
 ```
 ## License
 
-MIT
+Do whatever you want with this 🎉
 
 ---
 
